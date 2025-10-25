@@ -27,7 +27,7 @@ const {
   transponer
 } = require('./ejercicios');
 
-// Sistema de puntuaciÃ³n
+// Sistema de puntuación
 let puntosTotales = 0;
 const puntosMaximos = 100;
 
@@ -35,9 +35,9 @@ const puntosMaximos = 100;
 // SECCIÃ“N 1: VARIABLES Y TIPOS DE DATOS (10 puntos)
 // ============================================
 
-describe('SecciÃ³n 1: Variables y Tipos de Datos (10 puntos)', () => {
+describe('Sección 1: Variables y Tipos de Datos (10 puntos)', () => {
   
-  test('1.1 Mi InformaciÃ³n (2 puntos)', () => {
+  test('1.1 Mi Información (2 puntos)', () => {
     const info = miInformacion();
     expect(info).toHaveProperty('nombre');
     expect(info).toHaveProperty('edad');
@@ -51,7 +51,7 @@ describe('SecciÃ³n 1: Variables y Tipos de Datos (10 puntos)', () => {
     puntosTotales += 2;
   });
 
-  test('1.2 Operaciones BÃ¡sicas (3 puntos)', () => {
+  test('1.2 Operaciones Básicas (3 puntos)', () => {
     const resultado = operacionesBasicas(10, 5);
     expect(resultado.suma).toBe(15);
     expect(resultado.resta).toBe(5);
@@ -64,14 +64,14 @@ describe('SecciÃ³n 1: Variables y Tipos de Datos (10 puntos)', () => {
     puntosTotales += 3;
   });
 
-  test('1.3 Ãrea de RectÃ¡ngulo (2 puntos)', () => {
+  test('1.3 Ãrea de Rectángulo (2 puntos)', () => {
     expect(areaRectangulo(5, 10)).toBe(50);
     expect(areaRectangulo(7, 3)).toBe(21);
     expect(areaRectangulo(12, 8)).toBe(96);
     puntosTotales += 2;
   });
 
-  test('1.4 ConversiÃ³n Celsius a Fahrenheit (3 puntos)', () => {
+  test('1.4 Conversión Celsius a Fahrenheit (3 puntos)', () => {
     expect(celsiusAFahrenheit(0)).toBe(32);
     expect(celsiusAFahrenheit(100)).toBe(212);
     expect(celsiusAFahrenheit(25)).toBeCloseTo(77, 1);
@@ -84,7 +84,7 @@ describe('SecciÃ³n 1: Variables y Tipos de Datos (10 puntos)', () => {
 // SECCIÃ“N 2: CONDICIONALES (15 puntos)
 // ============================================
 
-describe('SecciÃ³n 2: Condicionales (15 puntos)', () => {
+describe('Sección 2: Condicionales (15 puntos)', () => {
   
   test('2.1 Par o Impar (3 puntos)', () => {
     expect(parOImpar(4)).toBe('par');
@@ -127,7 +127,7 @@ describe('SecciÃ³n 2: Condicionales (15 puntos)', () => {
 // SECCIÃ“N 3: FUNCIONES Y BUCLES (20 puntos)
 // ============================================
 
-describe('SecciÃ³n 3: Funciones y Bucles (20 puntos)', () => {
+describe('Sección 3: Funciones y Bucles (20 puntos)', () => {
   
   test('3.1 Factorial (5 puntos)', () => {
     expect(factorial(5)).toBe(120);
@@ -153,7 +153,7 @@ describe('SecciÃ³n 3: Funciones y Bucles (20 puntos)', () => {
     puntosTotales += 5;
   });
 
-  test('3.4 NÃºmeros Pares (6 puntos)', () => {
+  test('3.4 Números Pares (6 puntos)', () => {
     expect(numerosPares(10)).toEqual([2, 4, 6, 8, 10]);
     expect(numerosPares(5)).toEqual([2, 4]);
     expect(numerosPares(20)).toEqual([2, 4, 6, 8, 10, 12, 14, 16, 18, 20]);
@@ -166,7 +166,7 @@ describe('SecciÃ³n 3: Funciones y Bucles (20 puntos)', () => {
 // SECCIÃ“N 4: ARRAYS (25 puntos)
 // ============================================
 
-describe('SecciÃ³n 4: Arrays (25 puntos)', () => {
+describe('Sección 4: Arrays (25 puntos)', () => {
   
   test('4.1 Suma de Array (4 puntos)', () => {
     expect(sumaArray([1, 2, 3, 4, 5])).toBe(15);
@@ -184,7 +184,7 @@ describe('SecciÃ³n 4: Arrays (25 puntos)', () => {
     puntosTotales += 5;
   });
 
-  test('4.3 Encontrar MÃ¡ximo (6 puntos)', () => {
+  test('4.3 Encontrar Máximo (6 puntos)', () => {
     expect(encontrarMaximo([1, 5, 3, 9, 2])).toBe(9);
     expect(encontrarMaximo([10, 20, 30, 25])).toBe(30);
     expect(encontrarMaximo([5])).toBe(5);
@@ -213,7 +213,7 @@ describe('SecciÃ³n 4: Arrays (25 puntos)', () => {
 // SECCIÃ“N 5: ARRAYS BIDIMENSIONALES (30 puntos)
 // ============================================
 
-describe('SecciÃ³n 5: Arrays Bidimensionales - Matrices (30 puntos)', () => {
+describe('Sección 5: Arrays Bidimensionales - Matrices (30 puntos)', () => {
   
   test('5.1 Crear Matriz (6 puntos)', () => {
     const matriz2x3 = crearMatriz(2, 3);
@@ -293,11 +293,11 @@ afterAll(() => {
     calificacion = 'F - Reprobado';
   }
   
-  console.log(`ðŸŽ“ CalificaciÃ³n: ${calificacion}`);
+  console.log(`ðŸŽ“ Calificación: ${calificacion}`);
   console.log('='.repeat(50) + '\n');
   
   // Para GitHub Actions
   if (process.env.GITHUB_ACTIONS) {
-    console.log(`::notice title=CalificaciÃ³n::${puntosTotales}/${puntosMaximos} puntos (${porcentaje.toFixed(2)}%) - ${calificacion}`);
+    console.log(`::notice title=Calificación::${puntosTotales}/${puntosMaximos} puntos (${porcentaje.toFixed(2)}%) - ${calificacion}`);
   }
 });
