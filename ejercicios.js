@@ -15,9 +15,9 @@ function miInformacion() {
   // TODO: Declara las variables nombre, edad y carrera
   // Ejemplo: const nombre = "Juan";
   
-  const nombre = "";
-  const edad = 0;
-  const carrera = "";
+  const nombre = "Neasaka Pendragon";
+  const edad = 23;
+  const carrera = "The Best";
   
   return { nombre, edad, carrera };
 }
@@ -31,10 +31,10 @@ function miInformacion() {
 function operacionesBasicas(a, b) {
   // TODO: Calcula suma, resta, multiplicaciÃ³n y divisiÃ³n de a y b
   
-  const suma = 0;
-  const resta = 0;
-  const multiplicacion = 0;
-  const division = 0;
+  const suma = a + b;
+  const resta = a - b;
+  const multiplicacion = a * b;
+  const division = a / b;
   
   return { suma, resta, multiplicacion, division };
 }
@@ -47,19 +47,21 @@ function operacionesBasicas(a, b) {
  */
 function areaRectangulo(base, altura) {
   // TODO: Calcula y retorna el Ã¡rea (base * altura)
-  return 0;
+  area = base * altura
+  return area;
 }
 
 /**
  * Ejercicio 1.4: ConversiÃ³n de temperatura (3 puntos)
  * Convierte grados Celsius a Fahrenheit
- * FÃ³rmula: F = C * 9/5 + 32
+ * FÃ³rmula: Fs = C * 9/5 + 32
  * @param {number} celsius - Temperatura en Celsius
  * @returns {number} - Temperatura en Fahrenheit
  */
 function celsiusAFahrenheit(celsius) {
   // TODO: Implementa la conversiÃ³n
-  return 0;
+  temperatura = celsius * 9 / 5 + 32;
+  return temperatura;
 }
 
 // ============================================
@@ -74,7 +76,7 @@ function celsiusAFahrenheit(celsius) {
 function parOImpar(numero) {
   // TODO: Usa el operador % (mÃ³dulo) para determinar si es par o impar
   // Pista: Un nÃºmero es par si numero % 2 === 0
-  return "";
+  return numero % 2 === 0 ? "par" : "impar";
 }
 
 /**
@@ -84,7 +86,7 @@ function parOImpar(numero) {
  */
 function evaluarNota(nota) {
   // TODO: Implementa la lÃ³gica con if/else
-  return "";
+  return nota >= 60 ? "Aprobado" : "Reprobado";
 }
 
 /**
@@ -96,7 +98,7 @@ function evaluarNota(nota) {
  */
 function mayorDeTres(a, b, c) {
   // TODO: Encuentra y retorna el mayor de los tres nÃºmeros
-  return 0;
+  return Math.max(a, b, c);
 }
 
 /**
@@ -105,8 +107,9 @@ function mayorDeTres(a, b, c) {
  * @returns {string} - "menor" (0-17), "adulto" (18-64), "mayor" (65+)
  */
 function clasificarEdad(edad) {
-  // TODO: Implementa la clasificaciÃ³n con if/else if/else
-  return "";
+  if (edad <= 17) return "menor";
+  else if (edad <= 64) return "adulto";
+  else return "mayor";
 }
 
 // ============================================
