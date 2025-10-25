@@ -10,20 +10,20 @@
 - Aprender a usar Git y GitHub
 - Dominar los fundamentos de JavaScript
 - Prepararte para programar operaciones matriciales
-- Desarrollar habilidades de resoluciÃ³n de problemas
+- Desarrollar habilidades de resolución de problemas
 
 ## Requisitos previos
 
 - Tener una cuenta en [GitHub](https://github.com)
-- Instalar [Node.js](https://nodejs.org) (versiÃ³n 14 o superior)
+- Instalar [Node.js](https://nodejs.org) (versión 14 o superior)
 - Instalar [Git](https://git-scm.com)
-- Un editor de cÃ³digo como [VS Code](https://code.visualstudio.com)
+- Un editor de código como [VS Code](https://code.visualstudio.com)
 
-## Â¿CÃ³mo empezar?
+## ¿Cómo empezar?
 
 ### Paso 1: Fork del repositorio
-1. Haz clic en el botÃ³n **Fork** en la esquina superior derecha
-2. Esto crearÃ¡ una copia del repositorio en tu cuenta
+1. Haz clic en el botón **Fork** en la esquina superior derecha
+2. Esto creará una copia del repositorio en tu cuenta
 
 ### Paso 2: Clonar tu fork
 ```bash
@@ -37,9 +37,9 @@ npm install
 ```
 
 ### Paso 4: Completar los ejercicios
-Abre el archivo `ejercicios.js` y completa cada funciÃ³n siguiendo las instrucciones.
+Abre el archivo `ejercicios.js` y completa cada función siguiendo las instrucciones.
 
-### Paso 5: Probar tu cÃ³digo localmente
+### Paso 5: Probar tu código localmente
 ```bash
 npm test
 ```
@@ -51,53 +51,53 @@ git commit -m "Ejercicio #XX completado"
 git push origin main
 ```
 
-### Paso 7: Ver tu calificaciÃ³n
-- Ve a la pestaÃ±a **Actions** en tu repositorio de GitHub
-- VerÃ¡s el resultado de los tests automÃ¡ticos
-- Â¡Tu calificaciÃ³n aparecerÃ¡ allÃ­!
+### Paso 7: Ver tu calificación
+- Ve a la pestaña **Actions** en tu repositorio de GitHub
+- Verás el resultado de los tests automáticos
+- ¡Tu calificación aparecerá allí­!
 
 ## Estructura del repositorio
 
 ```
 fundamentos-programacion/
-â”œâ”€â”€ README.md              # Este archivo
-â”œâ”€â”€ ejercicios.js          # AquÃ­ escribirÃ¡s tu cÃ³digo
-â”œâ”€â”€ ejercicios.test.js     # Tests (NO modificar)
-â”œâ”€â”€ package.json           # ConfiguraciÃ³n del proyecto
-â””â”€â”€ .github/
-    â””â”€â”€ workflows/
-        â””â”€â”€ test.yml       # ConfiguraciÃ³n de GitHub Actions
+├── .github/
+│   └── workflows/
+│       └── test.yml           # Configuración de GitHub Actions
+├── ejercicios.js              # Aquí­ escribirás tu código
+├── ejercicios.test.js         # Tests (NO modificar)
+├── package.json               # Configuración del proyecto
+└── README.md                  # Este archivo
 ```
 
 ## Reglas importantes
 
 1. **SOLO** debes modificar el archivo `ejercicios.js`
 2. **NO** modifiques los archivos de test
-3. **NO** modifiques la configuraciÃ³n de GitHub Actions
-4. Todos los ejercicios deben pasar los tests para obtener la mÃ¡xima calificaciÃ³n
+3. **NO** modifiques la configuración de GitHub Actions
+4. Todos los ejercicios deben pasar los tests para obtener la máxima calificación
 
 ## Consejos
 
 - Lee cuidadamente las instrucciones de cada ejercicio
-- Prueba tu cÃ³digo localmente antes de hacer push
-- Si un test falla, lee el mensaje de error - te dice quÃ© estÃ¡ mal
-- Puedes hacer mÃºltiples commits, no hay penalizaciÃ³n
-- Busca ayuda en la documentaciÃ³n de [JavaScript MDN](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- Prueba tu código localmente antes de hacer push
+- Si un test falla, lee el mensaje de error - te dice qué está mal
+- Puedes hacer múltiples commits, no hay penalización
+- Busca ayuda en la documentación de [JavaScript MDN](https://developer.mozilla.org/es/docs/Web/JavaScript)
 
-## Sistema de calificaciÃ³n
+## Sistema de calificación
 
-- Cada ejercicio vale puntos especÃ­ficos
-- La calificaciÃ³n final es automÃ¡tica
-- AparecerÃ¡ en los resultados de GitHub Actions
+- Cada ejercicio vale puntos especí­ficos
+- La calificación final es automática
+- Aparecerá en los resultados de GitHub Actions
 - Badge de estado: ![Tests](https://github.com/JorgeTSW/fundamentos-programacion-practica-1/actions/workflows/test.yml/badge.svg)
 
-## PrÃ³ximos pasos
+## Próximos pasos
 
 Una vez domines estos fundamentos, trabajaremos en:
 - Operaciones con matrices
 - Calculadora matricial
-- Aplicaciones prÃ¡cticas (editores de imÃ¡genes, encriptaciÃ³n)
+- Aplicaciones prácticas (editores de imágenes, encriptación)
 
 ---
 
-**Â¡Ã‰xito en tu prÃ¡ctica!**
+**¡Éxito en tu práctica!**
