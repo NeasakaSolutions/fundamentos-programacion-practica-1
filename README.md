@@ -89,7 +89,7 @@ fundamentos-programacion/
 - Cada ejercicio vale puntos especÃ­ficos
 - La calificaciÃ³n final es automÃ¡tica
 - AparecerÃ¡ en los resultados de GitHub Actions
-- Badge de estado: ![Tests](../../actions/workflows/test.yml/badge.svg)
+- Badge de estado: ![Tests](https://github.com/JorgeTSW/fundamentos-programacion-practica-1/actions/workflows/test.yml/badge.svg)
 
 ## PrÃ³ximos pasos
 
