@@ -1,0 +1,32 @@
+{
+  "name": "fundamentos-programacion",
+  "version": "1.0.0",
+  "description": "PrÃ¡ctica de fundamentos de programaciÃ³n - Desarrollo de Software y Negocios Digitales",
+  "main": "ejercicios.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "javascript",
+    "fundamentos",
+    "programacion",
+    "matrices",
+    "algebra"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "collectCoverage": false,
+    "coverageDirectory": "coverage",
+    "testMatch": [
+      "**/*.test.js"
+    ]
+  }
+}
