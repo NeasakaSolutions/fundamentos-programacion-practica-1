@@ -20,13 +20,14 @@
   "devDependencies": {
     "jest": "^29.7.0"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "verbose": true,
-    "collectCoverage": false,
-    "coverageDirectory": "coverage",
-    "testMatch": [
-      "**/*.test.js"
-    ]
-  }
+"jest": {
+  "testEnvironment": "node",
+  "verbose": true,
+  "collectCoverage": false,
+  "coverageDirectory": "coverage",
+  "testMatch": [
+    "**/*.test.js"
+  ],
+  "bail": 1,
+  "maxWorkers": 1
 }
