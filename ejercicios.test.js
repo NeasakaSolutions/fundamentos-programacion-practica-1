@@ -32,7 +32,7 @@ let puntosTotales = 0;
 const puntosMaximos = 100;
 
 // ============================================
-// SECCIÃ“N 1: VARIABLES Y TIPOS DE DATOS (10 puntos)
+// SECCIÓN 1: VARIABLES Y TIPOS DE DATOS (10 puntos)
 // ============================================
 
 describe('Sección 1: Variables y Tipos de Datos (10 puntos)', () => {
@@ -81,7 +81,7 @@ describe('Sección 1: Variables y Tipos de Datos (10 puntos)', () => {
 });
 
 // ============================================
-// SECCIÃ“N 2: CONDICIONALES (15 puntos)
+// SECCIÓN 2: CONDICIONALES (15 puntos)
 // ============================================
 
 describe('Sección 2: Condicionales (15 puntos)', () => {
@@ -124,7 +124,7 @@ describe('Sección 2: Condicionales (15 puntos)', () => {
 });
 
 // ============================================
-// SECCIÃ“N 3: FUNCIONES Y BUCLES (20 puntos)
+// SECCIÓN 3: FUNCIONES Y BUCLES (20 puntos)
 // ============================================
 
 describe('Sección 3: Funciones y Bucles (20 puntos)', () => {
@@ -163,7 +163,7 @@ describe('Sección 3: Funciones y Bucles (20 puntos)', () => {
 });
 
 // ============================================
-// SECCIÃ“N 4: ARRAYS (25 puntos)
+// SECCIÓN 4: ARRAYS (25 puntos)
 // ============================================
 
 describe('Sección 4: Arrays (25 puntos)', () => {
@@ -210,7 +210,7 @@ describe('Sección 4: Arrays (25 puntos)', () => {
 });
 
 // ============================================
-// SECCIÃ“N 5: ARRAYS BIDIMENSIONALES (30 puntos)
+// SECCIÓN 5: ARRAYS BIDIMENSIONALES (30 puntos)
 // ============================================
 
 describe('Sección 5: Arrays Bidimensionales - Matrices (30 puntos)', () => {
@@ -273,7 +273,7 @@ describe('Sección 5: Arrays Bidimensionales - Matrices (30 puntos)', () => {
 
 afterAll(() => {
   console.log('\n' + '='.repeat(50));
-  console.log('REPORTE DE CALIFICACIÃ“N');
+  console.log('REPORTE DE CALIFICACIÓN');
   console.log('='.repeat(50));
   console.log(`Puntos obtenidos: ${puntosTotales}/${puntosMaximos}`);
   console.log(`Porcentaje: ${((puntosTotales/puntosMaximos) * 100).toFixed(2)}%`);
@@ -293,7 +293,7 @@ afterAll(() => {
     calificacion = 'F - Reprobado';
   }
   
-  console.log(`ðŸŽ“ Calificación: ${calificacion}`);
+  console.log(`“ Calificación: ${calificacion}`);
   console.log('='.repeat(50) + '\n');
   
   // Para GitHub Actions
