@@ -1,0 +1,110 @@
+name: Tests y Calificación Automática
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v3
+      
+    - name: Configurar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Instalar dependencias
+      run: npm install
+      
+    - name: Ejecutar tests
+      run: npm test
+      
+    - name: Generar reporte de cobertura
+      run: npm run test:coverage
+      continue-on-error: true
+      
+    - name: Mostrar estadísticas
+      run: |
+        echo "Tests completados"
+        echo "Revisa los resultados arriba para ver tu calificación"
+        
+    - name: ¡Felicidades!
+      if: success()
+      run: |
+        echo "¡Excelente trabajo! Todos los tests pasaron correctamente."
+        echo "Tu código está listo para ser calificado."
+```
+
+4. **Commit message:** "Agregar GitHub Actions workflow"
+
+5. Clic en **"Commit changes"**
+
+---
+
+### Paso 2: Crear el .gitignore (si no lo has subido)
+
+1. **"Add file"** → **"Create new file"**
+
+2. Nombre: `.gitignore`
+
+3. **Copia y pega este contenido:**
+```
+# Dependencias
+node_modules/
+package-lock.json
+
+# Archivos de cobertura
+coverage/
+.nyc_output/
+
+# Archivos del editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Variables de entorno
+.env
+.env.local
+.env.production.local
+```
+
+4. Commit: "Agregar .gitignore"
+
+---
+
+## ✅ Verificación
+
+Después de crear estos archivos:
+
+1. **Ve a la pestaña "Actions"**
+   - Debería aparecer un workflow ejecutándose
+   - Los tests fallarán (es normal - ejercicios vacíos)
+
+2. **Verifica que tengas esta estructura:**
+```
+   .github/
+     workflows/
+       test.yml
+   .gitignore
+   ejercicios.js
+   ejercicios.test.js
+   package.json
+   (y todos los demás archivos .md)
