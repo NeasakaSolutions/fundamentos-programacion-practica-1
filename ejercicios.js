@@ -15,7 +15,7 @@ function miInformacion() {
   // TODO: Declara las variables nombre, edad y carrera
   // Ejemplo: const nombre = "Juan";
   
-  const nombre = "Neasaka Pendragon";
+  const nombre = "Neasaka";
   const edad = 23;
   const carrera = "The Best";
   
@@ -124,8 +124,11 @@ function clasificarEdad(edad) {
  * @returns {number} - Factorial de n
  */
 function factorial(n) {
-  // TODO: Implementa usando un bucle for
-  return 1;
+  let resultado = 1;
+  for (let i = 2; i <= n; i++) {
+    resultado *= i;
+  }
+  return resultado;
 }
 
 /**
@@ -134,8 +137,11 @@ function factorial(n) {
  * @returns {number} - Suma de 1 + 2 + 3 + ... + n
  */
 function sumaHastaN(n) {
-  // TODO: Usa un bucle para sumar todos los nÃºmeros desde 1 hasta n
-  return 0;
+  let suma = 0;
+  for (let i = 1; i <= n; i++) {
+    suma += i;
+  }
+  return suma;
 }
 
 /**
@@ -145,8 +151,10 @@ function sumaHastaN(n) {
  * Ejemplo: tablaMultiplicar(3) debe retornar [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
  */
 function tablaMultiplicar(numero) {
-  // TODO: Genera un array con la tabla de multiplicar
   const tabla = [];
+  for (let i = 1; i <= 10; i++) {
+    tabla.push(numero * i);
+  }
   return tabla;
 }
 
@@ -157,8 +165,10 @@ function tablaMultiplicar(numero) {
  * Ejemplo: numerosPares(10) debe retornar [2, 4, 6, 8, 10]
  */
 function numerosPares(n) {
-  // TODO: Crea un array con todos los nÃºmeros pares hasta n
   const pares = [];
+  for (let i = 2; i <= n; i += 2) {
+    pares.push(i);
+  }
   return pares;
 }
 
@@ -172,8 +182,7 @@ function numerosPares(n) {
  * @returns {number} - Suma de todos los elementos
  */
 function sumaArray(numeros) {
-  // TODO: Suma todos los elementos del array
-  return 0;
+  return numeros.reduce((acc, val) => acc + val, 0);
 }
 
 /**
@@ -182,9 +191,9 @@ function sumaArray(numeros) {
  * @returns {number} - Promedio de los nÃºmeros
  */
 function promedioArray(numeros) {
-  // TODO: Calcula el promedio (suma total / cantidad de elementos)
-  return 0;
+  return numeros.length === 0 ? 0 : sumaArray(numeros) / numeros.length;
 }
+
 
 /**
  * Ejercicio 4.3: Encontrar el mÃ¡ximo (6 puntos)
@@ -192,9 +201,7 @@ function promedioArray(numeros) {
  * @returns {number} - El nÃºmero mÃ¡s grande del array
  */
 function encontrarMaximo(numeros) {
-  // TODO: Encuentra y retorna el nÃºmero mÃ¡s grande
-  // Pista: Puedes usar Math.max(...numeros) o hacerlo con un bucle
-  return 0;
+  return numeros.length === 0 ? undefined : Math.max(...numeros);
 }
 
 /**
@@ -205,9 +212,7 @@ function encontrarMaximo(numeros) {
  * Ejemplo: filtrarMayores([1, 5, 3, 8, 2], 4) debe retornar [5, 8]
  */
 function filtrarMayores(numeros, limite) {
-  // TODO: Crea un nuevo array con solo los nÃºmeros mayores al lÃ­mite
-  const mayores = [];
-  return mayores;
+  return numeros.filter(n => n > limite);
 }
 
 /**
@@ -217,10 +222,7 @@ function filtrarMayores(numeros, limite) {
  * Ejemplo: invertirArray([1, 2, 3, 4]) debe retornar [4, 3, 2, 1]
  */
 function invertirArray(arr) {
-  // TODO: Invierte el orden de los elementos
-  // Pista: Puedes usar arr.reverse() o hacerlo manualmente
-  const invertido = [];
-  return invertido;
+  return [...arr].reverse();
 }
 
 // ============================================
@@ -237,8 +239,11 @@ function invertirArray(arr) {
  * Ejemplo: crearMatriz(2, 3) debe retornar [[0, 0, 0], [0, 0, 0]]
  */
 function crearMatriz(filas, columnas) {
-  // TODO: Crea una matriz de filas x columnas llena de ceros
   const matriz = [];
+  for (let i = 0; i < filas; i++) {
+    const fila = new Array(columnas).fill(0);
+    matriz.push(fila);
+  }
   return matriz;
 }
 
@@ -249,9 +254,13 @@ function crearMatriz(filas, columnas) {
  * Ejemplo: sumaMatriz([[1, 2], [3, 4]]) debe retornar 10
  */
 function sumaMatriz(matriz) {
-  // TODO: Suma todos los elementos de la matriz
-  // NecesitarÃ¡s dos bucles: uno para las filas y otro para las columnas
-  return 0;
+  let suma = 0;
+  for (let i = 0; i < matriz.length; i++) {
+    for (let j = 0; j < matriz[i].length; j++) {
+      suma += matriz[i][j];
+    }
+  }
+  return suma;
 }
 
 /**
@@ -262,8 +271,7 @@ function sumaMatriz(matriz) {
  * Ejemplo: obtenerFila([[1, 2], [3, 4], [5, 6]], 1) debe retornar [3, 4]
  */
 function obtenerFila(matriz, indiceFila) {
-  // TODO: Retorna la fila indicada
-  return [];
+  return matriz[indiceFila];
 }
 
 /**
@@ -274,9 +282,7 @@ function obtenerFila(matriz, indiceFila) {
  * Ejemplo: obtenerColumna([[1, 2], [3, 4], [5, 6]], 0) debe retornar [1, 3, 5]
  */
 function obtenerColumna(matriz, indiceColumna) {
-  // TODO: Extrae todos los elementos de la columna indicada
-  const columna = [];
-  return columna;
+  return matriz.map(fila => fila[indiceColumna]);
 }
 
 /**
@@ -287,8 +293,15 @@ function obtenerColumna(matriz, indiceColumna) {
  * Ejemplo: transponer([[1, 2, 3], [4, 5, 6]]) debe retornar [[1, 4], [2, 5], [3, 6]]
  */
 function transponer(matriz) {
-  // TODO: Crea la matriz transpuesta
-  const transpuesta = [];
+  if (matriz.length === 0) return [];
+  const filas = matriz.length;
+  const columnas = matriz[0].length;
+  const transpuesta = crearMatriz(columnas, filas);
+  for (let i = 0; i < filas; i++) {
+    for (let j = 0; j < columnas; j++) {
+      transpuesta[j][i] = matriz[i][j];
+    }
+  }
   return transpuesta;
 }
 
